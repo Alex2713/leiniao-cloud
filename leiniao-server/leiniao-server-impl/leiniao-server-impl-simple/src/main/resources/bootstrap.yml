@@ -1,0 +1,48 @@
+# Tomcat
+server:
+  port: 3100
+
+# Spring
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    # 应用名称
+    name: service-simple
+  profiles:
+    # 环境配置
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        # 命名空间
+        namespace: d0928a69-deb9-4857-b475-43c17d562e52
+        # 注册中心地址
+        server-addr: 175.24.200.44:8848
+        username: nacos
+        password: Hu371329
+      config:
+        # 命名空间
+        namespace: d0928a69-deb9-4857-b475-43c17d562e52
+        # 配置中心地址
+        server-addr: 175.24.200.44:8848
+        username: nacos
+        password: Hu371329
+        # 配置文件格式
+        file-extension: yml
+        # 共享配置
+        shared-configs:
+
+swagger:
+  basePackage: com.shenkong.server.impl
+  title: service-simple
+  description: service-simple
+  version: 1.0.0
+  license: Apache 2.0
+  licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfServiceUrl: http://www.apache.org/licenses/LICENSE-2.0.html
+  host: https://www.shenkong.com/
+  contact:
+    name: huweilong
+    url: https://www.huweilong.com/
+    email: huweilong@huweilong.com
